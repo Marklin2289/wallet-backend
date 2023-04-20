@@ -1,16 +1,14 @@
-# Sample Hardhat Project
+# Wallet + Uniswap + AAVE
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates :
+
+- simple wallet : deposit, withdraw, transfer
+
+- swap on uniswap
+
+- supplying , borrowing , repay and withdraw on AAVE
 
 Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
 
 ```
 yarn install
@@ -44,14 +42,13 @@ yarn hardhat test
 // deposit(token, amount)
 // withdraw(token, amount)
 
-// supplyAaveV2(token, amount)
-// borrowAaveV2()
-// repayAaveV2()
-// withdrawAaveV2()
+// supplyAaveV3(token, amount)
+// borrowAaveV3()
+// repayAaveV3()
+// withdrawAaveV3()
 
 // getAaveTokenAddress(token) => returns aToken and debtToken address
 
-/\*
 
 mapping(address => Balance) balances
 
@@ -67,16 +64,10 @@ constructor(address \_owner) {
 owner = \_owner;
 }
 
-\*\*/
-
-/\*
 
 LiquidityProvider: behaves as a liquidity provider on different dex protocols (V2, V3, Curve, etc)
 
-\*\*/
-
-/\*
-
+========================================================
 Factory: deploys the Wallet contract
 
     function deploy(
@@ -124,9 +115,6 @@ Factory: deploys the Wallet contract
          https://uniswapv3book.com/docs/milestone_1/first-swap/
 
          https://github.com/aave
-
-\*\*/
-
 
 ```
 ````
