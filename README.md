@@ -12,6 +12,13 @@ npx hardhat node
 npx hardhat run scripts/deploy.ts
 ```
 
+```
+yarn install
+create .env file :
+MAINNET_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/...
+yarn hardhat test
+```
+
 ````
 // Wallet
 
